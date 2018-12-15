@@ -1,0 +1,299 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{5917B945-BBFB-49F6-B2B9-E46D8D1F3B81}</ProjectGuid>
+			<ProjectType>CppPackage</ProjectType>
+			<MainSource>DCPcppbuilder5.cpp</MainSource>
+			<Config Condition="'$(Config)'==''">Debug</Config>
+			<ProjectVersion>12.0</ProjectVersion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+			<Cfg_1>true</Cfg_1>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+			<Cfg_2>true</Cfg_2>
+			<CfgParent>Base</CfgParent>
+			<Base>true</Base>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Base)'!=''">
+			<LinkPackageImports>rtl.bpi;vcl.bpi</LinkPackageImports>
+			<IncludePath>Ciphers\;Hashes\;$(IncludePath)</IncludePath>
+			<BRCC_Defines>_DEBUG;$(BRCC_Defines)</BRCC_Defines>
+			<TASM_Defines>_DEBUG;$(TASM_Defines)</TASM_Defines>
+			<BCC_PCHCache>true</BCC_PCHCache>
+			<ILINK_FullDebugInfo>true</ILINK_FullDebugInfo>
+			<DCC_UnitSearchPath>.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+			<DCC_CBuilderOutput>JPHNE</DCC_CBuilderOutput>
+			<PackageImports>rtl.bpi;vcl.bpi</PackageImports>
+			<ILINK_AppType>Windows</ILINK_AppType>
+			<BRCC_IncludePath>Hashes;Ciphers;\\harrier.fen.bris.ac.uk\homes\temp\Hashes;\\harrier.fen.bris.ac.uk\homes\temp\Ciphers;\\harrier.fen.bris.ac.uk\homes\temp;$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware;$(BRCC_IncludePath)</BRCC_IncludePath>
+			<BCC_IncludePath>Hashes;Ciphers;\\harrier.fen.bris.ac.uk\homes\temp\Hashes;\\harrier.fen.bris.ac.uk\homes\temp\Ciphers;\\harrier.fen.bris.ac.uk\homes\temp;$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware;$(BCC_IncludePath)</BCC_IncludePath>
+			<ILINK_GenerateLibFile>true</ILINK_GenerateLibFile>
+			<BCC_SourceDebuggingOn>true</BCC_SourceDebuggingOn>
+			<UsePackages>true</UsePackages>
+			<DCC_IncludePath>.\;$(BDS)\lib;$(BDS)\lib\obj;$(DCC_IncludePath)</DCC_IncludePath>
+			<ILINK_GenerateImportLibrary>true</ILINK_GenerateImportLibrary>
+			<TASM_IncludePath>Hashes;Ciphers;\\harrier.fen.bris.ac.uk\homes\temp\Hashes;\\harrier.fen.bris.ac.uk\homes\temp\Ciphers;\\harrier.fen.bris.ac.uk\homes\temp;$(BDS)\include;$(BDS)\include\vcl;$(BDS)\include\dinkumware;$(TASM_IncludePath)</TASM_IncludePath>
+			<BCC_DisableOptimizations>true</BCC_DisableOptimizations>
+			<BCC_GenerateMultithreaded>true</BCC_GenerateMultithreaded>
+			<OutputExt>bpl</OutputExt>
+			<FinalOutputDir>.</FinalOutputDir>
+			<ILINK_WinAppType>Package</ILINK_WinAppType>
+			<TASM_AdditionalSwitches> /w2</TASM_AdditionalSwitches>
+			<AllPackageLibs>rtl.lib;vcl.lib</AllPackageLibs>
+			<ILINK_Description>DCPcrypt cryptographic component library v2 BETA 3</ILINK_Description>
+			<ILINK_LibraryPath>Ciphers\;Hashes\;Hashes;Ciphers;\\harrier.fen.bris.ac.uk\homes\temp\Hashes;\\harrier.fen.bris.ac.uk\homes\temp\Ciphers;\\harrier.fen.bris.ac.uk\homes\temp;$(BDS)\lib\obj;$(BDS)\lib;$(BDS)\lib\psdk;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<Multithreaded>true</Multithreaded>
+			<BCC_Defines>NO_STRICT;$(BCC_Defines)</BCC_Defines>
+			<BCC_UserSuppliedOptions> -Vx -r- -k -Ve</BCC_UserSuppliedOptions>
+			<DCC_AdditionalSwitches> -M</DCC_AdditionalSwitches>
+			<DynamicRTL>true</DynamicRTL>
+			<BCC_DebugLineNumbers>true</BCC_DebugLineNumbers>
+			<BCC_InlineFunctionExpansion>false</BCC_InlineFunctionExpansion>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_1)'!=''">
+			<BCC_UserSuppliedOptions> -Vx -r- -k -Ve -k</BCC_UserSuppliedOptions>
+			<ILINK_LibraryPath>$(BDS)\lib\debug;$(ILINK_LibraryPath);$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<BCC_Defines>_DEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+			<IntermediateOutputDir>Debug_Build</IntermediateOutputDir>
+			<DCC_Define>DEBUG;$(DCC_Define);$(DCC_Define)</DCC_Define>
+			<ILINK_DisableIncrementalLinking>true</ILINK_DisableIncrementalLinking>
+			<TASM_Debugging>Full</TASM_Debugging>
+			<DCC_AdditionalSwitches> -M -V</DCC_AdditionalSwitches>
+			<TASM_DisplaySourceLines>true</TASM_DisplaySourceLines>
+			<DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Cfg_2)'!=''">
+			<BCC_Defines>NDEBUG;$(BCC_Defines);$(BCC_Defines)</BCC_Defines>
+			<BCC_UserSuppliedOptions> -Vx -r- -k -Ve -r</BCC_UserSuppliedOptions>
+			<BCC_OptimizeForSpeed>true</BCC_OptimizeForSpeed>
+			<IntermediateOutputDir>Release_Build</IntermediateOutputDir>
+			<DCC_AdditionalSwitches> -M -$O+</DCC_AdditionalSwitches>
+			<TASM_Debugging>None</TASM_Debugging>
+			<ILINK_LibraryPath>$(BDS)\lib\release;$(ILINK_LibraryPath);$(ILINK_LibraryPath)</ILINK_LibraryPath>
+			<BCC_InlineFunctionExpansion>true</BCC_InlineFunctionExpansion>
+		</PropertyGroup>
+		<ItemGroup>
+			<DelphiCompile Include="Ciphers\DCPserpent.pas">
+				<BuildOrder>22</BuildOrder>
+				<BuildOrder>0</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Ciphers\DCPrijndael.pas">
+				<BuildOrder>21</BuildOrder>
+				<BuildOrder>1</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Ciphers\DCPtwofish.pas">
+				<BuildOrder>24</BuildOrder>
+				<BuildOrder>2</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Ciphers\DCPtea.pas">
+				<BuildOrder>23</BuildOrder>
+				<BuildOrder>3</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Ciphers\DCPrc4.pas">
+				<BuildOrder>18</BuildOrder>
+				<BuildOrder>4</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Ciphers\DCPrc2.pas">
+				<BuildOrder>17</BuildOrder>
+				<BuildOrder>5</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Ciphers\DCPrc6.pas">
+				<BuildOrder>20</BuildOrder>
+				<BuildOrder>6</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Ciphers\DCPrc5.pas">
+				<BuildOrder>19</BuildOrder>
+				<BuildOrder>7</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Hashes\DCPhaval.pas">
+				<BuildOrder>25</BuildOrder>
+				<BuildOrder>8</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Hashes\DCPsha256.pas">
+				<BuildOrder>31</BuildOrder>
+				<BuildOrder>9</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Hashes\DCPsha1.pas">
+				<BuildOrder>30</BuildOrder>
+				<BuildOrder>10</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Hashes\DCPtiger.pas">
+				<BuildOrder>33</BuildOrder>
+				<BuildOrder>11</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Hashes\DCPsha512.pas">
+				<BuildOrder>32</BuildOrder>
+				<BuildOrder>12</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Hashes\DCPmd5.pas">
+				<BuildOrder>27</BuildOrder>
+				<BuildOrder>13</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Hashes\DCPmd4.pas">
+				<BuildOrder>26</BuildOrder>
+				<BuildOrder>14</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Hashes\DCPripemd160.pas">
+				<BuildOrder>29</BuildOrder>
+				<BuildOrder>15</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Hashes\DCPripemd128.pas">
+				<BuildOrder>28</BuildOrder>
+				<BuildOrder>16</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="DCPconst.pas">
+				<BuildOrder>5</BuildOrder>
+				<BuildOrder>17</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="DCPblockciphers.pas">
+				<BuildOrder>4</BuildOrder>
+				<BuildOrder>18</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="DCPreg.pas">
+				<BuildOrder>7</BuildOrder>
+				<BuildOrder>19</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="DCPcrypt2.pas">
+				<BuildOrder>6</BuildOrder>
+				<BuildOrder>20</BuildOrder>
+			</DelphiCompile>
+			<ResFiles Include="DCPcppbuilder5.res">
+				<BuildOrder>-1</BuildOrder>
+				<BuildOrder>1</BuildOrder>
+			</ResFiles>
+			<CppCompile Include="DCPcppbuilder5.cpp">
+				<BuildOrder>-1</BuildOrder>
+				<BuildOrder>0</BuildOrder>
+			</CppCompile>
+			<DelphiCompile Include="DCPbase64.pas">
+				<BuildOrder>3</BuildOrder>
+				<BuildOrder>23</BuildOrder>
+			</DelphiCompile>
+			<PackageImport Include="vcl.bpi">
+				<BuildOrder>2</BuildOrder>
+				<BuildOrder>24</BuildOrder>
+			</PackageImport>
+			<DelphiCompile Include="Ciphers\DCPblowfish.pas">
+				<BuildOrder>8</BuildOrder>
+				<BuildOrder>25</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Ciphers\DCPidea.pas">
+				<BuildOrder>14</BuildOrder>
+				<BuildOrder>26</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Ciphers\DCPice.pas">
+				<BuildOrder>13</BuildOrder>
+				<BuildOrder>27</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Ciphers\DCPmisty1.pas">
+				<BuildOrder>16</BuildOrder>
+				<BuildOrder>28</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Ciphers\DCPmars.pas">
+				<BuildOrder>15</BuildOrder>
+				<BuildOrder>29</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Ciphers\DCPcast256.pas">
+				<BuildOrder>10</BuildOrder>
+				<BuildOrder>30</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Ciphers\DCPcast128.pas">
+				<BuildOrder>9</BuildOrder>
+				<BuildOrder>31</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Ciphers\DCPgost.pas">
+				<BuildOrder>12</BuildOrder>
+				<BuildOrder>32</BuildOrder>
+			</DelphiCompile>
+			<DelphiCompile Include="Ciphers\DCPdes.pas">
+				<BuildOrder>11</BuildOrder>
+				<BuildOrder>33</BuildOrder>
+			</DelphiCompile>
+			<BuildConfiguration Include="Base">
+				<Key>Base</Key>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Release">
+				<Key>Cfg_2</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+			<BuildConfiguration Include="Debug">
+				<Key>Cfg_1</Key>
+				<CfgParent>Base</CfgParent>
+			</BuildConfiguration>
+		</ItemGroup>
+		<Import Project="$(BDS)\Bin\CodeGear.Cpp.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Cpp.Targets')"/>
+		<ProjectExtensions>
+			<Borland.Personality>CPlusPlusBuilder.Personality.12</Borland.Personality>
+			<Borland.ProjectType>CppPackage</Borland.ProjectType>
+			<BorlandProject>
+				<CPlusPlusBuilder.Personality>
+					<VersionInfo>
+						<VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+						<VersionInfo Name="AutoIncBuild">False</VersionInfo>
+						<VersionInfo Name="MajorVer">1</VersionInfo>
+						<VersionInfo Name="MinorVer">0</VersionInfo>
+						<VersionInfo Name="Release">0</VersionInfo>
+						<VersionInfo Name="Build">0</VersionInfo>
+						<VersionInfo Name="Debug">False</VersionInfo>
+						<VersionInfo Name="PreRelease">False</VersionInfo>
+						<VersionInfo Name="Special">False</VersionInfo>
+						<VersionInfo Name="Private">False</VersionInfo>
+						<VersionInfo Name="DLL">False</VersionInfo>
+						<VersionInfo Name="Locale">2057</VersionInfo>
+						<VersionInfo Name="CodePage">1252</VersionInfo>
+					</VersionInfo>
+					<VersionInfoKeys>
+						<VersionInfoKeys Name="CompanyName"/>
+						<VersionInfoKeys Name="FileDescription">DCPcrypt cryptographic component library v2 BETA 3</VersionInfoKeys>
+						<VersionInfoKeys Name="FileVersion">2.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="InternalName">DCPcrypt</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalCopyright">Copyright © 1999-2002 David Barton</VersionInfoKeys>
+						<VersionInfoKeys Name="LegalTrademarks"/>
+						<VersionInfoKeys Name="OriginalFilename"/>
+						<VersionInfoKeys Name="ProductName">DCPcrypt</VersionInfoKeys>
+						<VersionInfoKeys Name="ProductVersion">2.0.0.0</VersionInfoKeys>
+						<VersionInfoKeys Name="Comments">Web: http://www.cityinthesky.co.uk/ Email:crypto@cityinthesky.co.uk</VersionInfoKeys>
+					</VersionInfoKeys>
+					<Debugging>
+						<Debugging Name="DebugSourceDirs">$(BCB)\source\vcl</Debugging>
+					</Debugging>
+					<Parameters>
+						<Parameters Name="RunParams"/>
+						<Parameters Name="HostApplication"/>
+						<Parameters Name="RemoteHost"/>
+						<Parameters Name="RemotePath"/>
+						<Parameters Name="RemoteDebug">False</Parameters>
+						<Parameters Name="Launcher"/>
+						<Parameters Name="UseLauncher">False</Parameters>
+						<Parameters Name="DebugCWD"/>
+						<Parameters Name="RemoteParams"/>
+						<Parameters Name="RemoteLauncher"/>
+						<Parameters Name="UseRemoteLauncher">False</Parameters>
+						<Parameters Name="RemoteCWD"/>
+						<Parameters Name="Debug Symbols Search Path"/>
+						<Parameters Name="LoadAllSymbols">True</Parameters>
+						<Parameters Name="LoadUnspecifiedSymbols">False</Parameters>
+					</Parameters>
+					<Compiler>
+						<Compiler Name="ShowInfoMsgs">0</Compiler>
+						<Compiler Name="LinkDebugVcl">0</Compiler>
+						<Compiler Name="LinkCGLIB">0</Compiler>
+					</Compiler>
+					<ProjectProperties>
+						<ProjectProperties Name="AutoShowDeps">False</ProjectProperties>
+						<ProjectProperties Name="ManagePaths">True</ProjectProperties>
+						<ProjectProperties Name="VerifyPackages">True</ProjectProperties>
+					</ProjectProperties>
+					<Source>
+						<Source Name="MainSource">DCPcppbuilder5.cpp</Source>
+					</Source>
+				</CPlusPlusBuilder.Personality>
+			</BorlandProject>
+			<ProjectFileVersion>12</ProjectFileVersion>
+		</ProjectExtensions>
+	</Project>
